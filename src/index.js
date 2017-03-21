@@ -24,7 +24,7 @@ class VKBot {
       data = { user_id: peer, message: data };
     else
       data = Object.assign(data, { user_id: peer });
-    this.api('messages.send', data);
+    return this.api('messages.send', data);
   }
 
   uploadPhoto = async (path) => {

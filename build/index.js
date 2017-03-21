@@ -148,7 +148,7 @@ var VKBot = function () {
     //idk for what it here
     value: function reply(peer, data) {
       if (typeof data === 'string') data = { user_id: peer, message: data };else data = (0, _assign2.default)(data, { user_id: peer });
-      this.api('messages.send', data);
+      return this.api('messages.send', data);
     }
   }, {
     key: 'onUpdates',
